@@ -83,6 +83,8 @@
 
   <!-- Header -->
   <header>
+    <div class="header-img blur-img"></div>
+    <div class="header-img neat-img"></div>
     <div class="container">
       <div class="intro-text">
         <div class="intro-lead-in">Welcome !</div>
@@ -386,7 +388,7 @@
     </div>
   </section>
 
-  
+
   <!-- Contact Section -->
   <section id="contact">
     <div class="container">
@@ -439,6 +441,22 @@
 
   <!-- Custom Theme JavaScript -->
   <script src="js/agency.js"></script>
+
+  <script>
+  $(window).scroll(function() {
+    // Get scroll position
+    var s = $(window).scrollTop(),
+    // scroll value and opacity
+    opacityVal = 1 - (s / 100.0);
+    // opacity value 0% to 100%
+    $('.neat-img').css('opacity', opacityVal);
+  });
+
+  $(window).load(function() {
+    var height = $('header .container').css('height');
+    $('.header-img').css('max-height', height);
+  });
+  </script>
 
 </body>
 
