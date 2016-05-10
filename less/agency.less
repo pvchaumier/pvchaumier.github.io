@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 // Custom Navigation Bar
 
 .navbar-default {
-    height: 64px;
+    height: 50px;
 	background-color: @gray-darkest;
 	border-color: transparent;
 	.navbar-brand {
@@ -143,13 +143,14 @@ h1, h2, h3, h4, h5, h6 {
     .navbar-default {
         background-color: transparent;
         padding: 25px 0;
+        height: 64px;
         -webkit-transition: padding 0.3s;
         -moz-transition: padding 0.3s;
         transition: padding 0.3s;
         border: none;
         .navbar-brand {
             opacity: 0;
-	        font-size: 2em;
+	        font-size: 1em;
 	        -webkit-transition: all 0.3s;
 	        -moz-transition: all 0.3s;
 	        transition: all 0.3s;
@@ -164,14 +165,30 @@ h1, h2, h3, h4, h5, h6 {
         .navbar-brand {
             opacity: 1;
             font-size: 1.5em;
-	    }    
+	    }
 	}
+}
+
+@media(min-width:768px) {
+    .navbar-default .container {
+        width: 100%;
+    }
+}
+@media(min-width:992px) {
+    .navbar-default .container {
+        width: 970px;
+    }
+}
+@media(min-width:1200px) {
+    .navbar-default .container {
+        width: 1170px;
+    }
 }
 
 header {
 	background-image: url('../img/main.jpg');
 	background-repeat: none;
-	background-attachment: scroll;
+	background-attachment: fixed;
 	background-position: center top;
 	.background-cover;
 	text-align: center;
@@ -249,10 +266,16 @@ section {
 #about {
     p {
         .serif-font;
-        font-size: 1.8em;
+        font-size: 1.2em;
         font-style: italic;
     }
 }
+@media(min-width:768px) {
+    #about p {
+        font-size: 1.8em;
+    }
+}
+
 
 // Portfolio Section
 
@@ -293,8 +316,8 @@ section {
                     h4 {
                         margin: 0;
                     }
-                }                
-            }            
+                }
+            }
         }
         .portfolio-caption {
         	max-width: 400px;
@@ -384,8 +407,8 @@ p.section-description {
         .timeline-image {
 	        left: 0;
 	        margin-left: 0;
-	        // width: 80px;
-	        height: 80px;
+	        width: 90px;
+	        height: 90px;
             position: absolute;
             z-index: 100;
             color: white;
@@ -717,8 +740,8 @@ ul.social-buttons {
                 -webkit-transform: rotate(90deg);
                 /* Safari and Chrome */
                 z-index:1052;
-            }            
-        }        
+            }
+        }
     }
     .modal-backdrop {
     	opacity: 0;
