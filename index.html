@@ -452,8 +452,10 @@
     $('.neat-img').css('opacity', opacityVal);
   });
 
-  $(window).load(function() {
+  $(window).bind('load resize', function() {
+    // get height of the header container
     var height = $('header .container').css('height');
+    // use this height to set the height of the background images
     $('.header-img').css('max-height', height);
   });
   </script>

@@ -107,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	.navbar-collapse {
 		border-color: fade(white, 2%);
+        background-color: @gray-darkest;
 	}
 	.navbar-toggle {
 		background-color: @yellow;
@@ -165,6 +166,9 @@ h1, h2, h3, h4, h5, h6 {
 		.navbar-nav>.active>a {
 			border-radius: 3px;
 		}
+        .navbar-collapse {
+            background-color: transparent;
+        }
     }
     .navbar-default.navbar-shrink {
         background-color: @gray-darkest;
@@ -193,7 +197,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-img {
-    max-height: 300px;
+    max-height: 1000px;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -201,14 +205,11 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     z-index: -1;
     background-image: url('../img/main.jpg');
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    // background-position: center top;
     background-position: center -50px;
     .background-cover;
-    opacity: 1;
     &.blur-img {
-        opacity: 1;
         background-image: url('../img/main_blur.png');
     }
 }
@@ -221,11 +222,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 header {
-	// background-image: url('../img/main.jpg');
-	// background-repeat: none;
-	// background-attachment: fixed;
-	// background-position: center top;
-	// .background-cover;
 	text-align: center;
 	color: white;
 	.intro-text {
